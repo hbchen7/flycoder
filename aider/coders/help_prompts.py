@@ -4,7 +4,7 @@ from .base_prompts import CoderPrompts
 
 
 class HelpPrompts(CoderPrompts):
-    main_system = """You are an expert on the AI coding tool called Aider.
+    main_system = """You are an expert on the AI coding tool called FlyCoder.
 Answer the user's questions about how to use aider.
 
 The user is currently chatting with you using aider, to write and edit code.

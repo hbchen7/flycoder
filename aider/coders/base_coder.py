@@ -16,6 +16,7 @@ import traceback
 from collections import defaultdict
 from datetime import datetime
 
+
 # Optional dependency: used to convert locale codes (eg ``en_US``)
 # into human-readable language names (eg ``English``).
 try:
@@ -49,7 +50,7 @@ from aider.run_cmd import run_cmd
 from aider.utils import format_content, format_messages, format_tokens, is_image_file
 from aider.waiting import WaitingSpinner
 
-from ..dump import dump  # noqa: F401
+from ..dump import dump
 from .chat_chunks import ChatChunks
 
 
@@ -57,9 +58,7 @@ class UnknownEditFormat(ValueError):
     def __init__(self, edit_format, valid_formats):
         self.edit_format = edit_format
         self.valid_formats = valid_formats
-        super().__init__(
-            f"Unknown edit format {edit_format}. Valid formats are: {', '.join(valid_formats)}"
-        )
+        super().__init__(f"Unknown edit format {edit_format}. Valid formats are: {', '.join(valid_formats)}")
 
 
 class MissingAPIKeyError(ValueError):
@@ -131,7 +130,7 @@ class Coder:
         summarize_from_coder=True,
         **kwargs,
     ):
-        import aider.coders as coders
+        from aider import coders
 
         if not main_model:
             if from_coder:
@@ -163,9 +162,7 @@ class Coder:
                     done_messages = from_coder.summarizer.summarize_all(done_messages)
                 except ValueError:
                     # If summarization fails, keep the original messages and warn the user
-                    io.tool_warning(
-                        "Chat history summarization failed, continuing with full history"
-                    )
+                    io.tool_warning("Chat history summarization failed, continuing with full history")
 
             # Bring along context from the old Coder
             update = dict(
@@ -194,9 +191,7 @@ class Coder:
                 return res
 
         valid_formats = [
-            str(c.edit_format)
-            for c in coders.__all__
-            if hasattr(c, "edit_format") and c.edit_format is not None
+            str(c.edit_format) for c in coders.__all__ if hasattr(c, "edit_format") and c.edit_format is not None
         ]
         raise UnknownEditFormat(edit_format, valid_formats)
 
@@ -206,7 +201,7 @@ class Coder:
 
     def get_announcements(self):
         lines = []
-        lines.append(f"Aider v{__version__}")
+        lines.append(f"FlyCoder v{__version__}")
 
         # Model
         main_model = self.main_model
@@ -237,10 +232,7 @@ class Coder:
         lines.append(output)
 
         if self.edit_format == "architect":
-            output = (
-                f"Editor model: {main_model.editor_model.name} with"
-                f" {main_model.editor_edit_format} edit format"
-            )
+            output = f"Editor model: {main_model.editor_model.name} with {main_model.editor_edit_format} edit format"
             lines.append(output)
 
         if weak_model is not main_model:
@@ -254,9 +246,7 @@ class Coder:
 
             lines.append(f"Git repo: {rel_repo_dir} with {num_files:,} files")
             if num_files > 1000:
-                lines.append(
-                    "Warning: For large repos, consider using --subtree-only and .aiderignore"
-                )
+                lines.append("Warning: For large repos, consider using --subtree-only and .aiderignore")
                 lines.append(f"See: {urls.large_repos}")
         else:
             lines.append("Git repo: none")
@@ -417,9 +407,7 @@ class Coder:
 
         self.main_model = main_model
         # Set the reasoning tag name based on model settings or default
-        self.reasoning_tag_name = (
-            self.main_model.reasoning_tag if self.main_model.reasoning_tag else REASONING_TAG
-        )
+        self.reasoning_tag_name = self.main_model.reasoning_tag if self.main_model.reasoning_tag else REASONING_TAG
 
         self.stream = stream and main_model.streaming
 
@@ -628,11 +616,8 @@ class Coder:
         else:
             self.fence = self.fences[0]
             self.io.tool_warning(
-                "Unable to find a fencing strategy! Falling back to:"
-                f" {self.fence[0]}...{self.fence[1]}"
+                f"Unable to find a fencing strategy! Falling back to: {self.fence[0]}...{self.fence[1]}"
             )
-
-        return
 
     def get_files_content(self, fnames=None):
         if not fnames:
@@ -767,9 +752,7 @@ class Coder:
         read_only_content = self.get_read_only_files_content()
         if read_only_content:
             readonly_messages += [
-                dict(
-                    role="user", content=self.gpt_prompts.read_only_files_prefix + read_only_content
-                ),
+                dict(role="user", content=self.gpt_prompts.read_only_files_prefix + read_only_content),
                 dict(
                     role="assistant",
                     content="Ok, I will use these files as references.",
@@ -816,9 +799,7 @@ class Coder:
 
     def get_images_message(self, fnames):
         supports_images = self.main_model.info.get("supports_vision")
-        supports_pdfs = self.main_model.info.get("supports_pdf_input") or self.main_model.info.get(
-            "max_pdf_size_mb"
-        )
+        supports_pdfs = self.main_model.info.get("supports_pdf_input") or self.main_model.info.get("max_pdf_size_mb")
 
         # https://github.com/BerriAI/litellm/pull/6928
         supports_pdfs = supports_pdfs or "claude-3-5-sonnet-20241022" in self.main_model.name
@@ -973,9 +954,7 @@ class Coder:
         for url in urls:
             if url not in self.rejected_urls:
                 url = url.rstrip(".',\"")
-                if self.io.confirm_ask(
-                    "Add URL to the chat?", subject=url, group=group, allow_never=True
-                ):
+                if self.io.confirm_ask("Add URL to the chat?", subject=url, group=group, allow_never=True):
                     inp += "\n\n"
                     inp += self.commands.cmd_web(url, return_content=True)
                 else:
@@ -1059,12 +1038,7 @@ class Coder:
             return None
 
         # Probably already a language name
-        if (
-            len(lang_code) > 3
-            and "_" not in lang_code
-            and "-" not in lang_code
-            and lang_code[0].isupper()
-        ):
+        if len(lang_code) > 3 and "_" not in lang_code and "-" not in lang_code and lang_code[0].isupper():
             return lang_code
 
         # Preferred: Babel
@@ -1148,10 +1122,7 @@ class Coder:
 
         if self.lint_cmds:
             if self.auto_lint:
-                platform_text += (
-                    "- The user's pre-commit runs these lint commands, don't suggest running"
-                    " them:\n"
-                )
+                platform_text += "- The user's pre-commit runs these lint commands, don't suggest running them:\n"
             else:
                 platform_text += "- The user prefers these lint commands:\n"
             for lang, cmd in self.lint_cmds.items():
@@ -1162,9 +1133,7 @@ class Coder:
 
         if self.test_cmd:
             if self.auto_test:
-                platform_text += (
-                    "- The user's pre-commit runs this test command, don't suggest running them: "
-                )
+                platform_text += "- The user's pre-commit runs this test command, don't suggest running them: "
             else:
                 platform_text += "- The user prefers this test command: "
             platform_text += self.test_cmd + "\n"
@@ -1190,9 +1159,7 @@ class Coder:
             rename_with_shell = self.gpt_prompts.rename_with_shell
         else:
             shell_cmd_prompt = self.gpt_prompts.no_shell_cmd_prompt.format(platform=platform_text)
-            shell_cmd_reminder = self.gpt_prompts.no_shell_cmd_reminder.format(
-                platform=platform_text
-            )
+            shell_cmd_reminder = self.gpt_prompts.no_shell_cmd_reminder.format(platform=platform_text)
             rename_with_shell = ""
 
         if user_lang:  # user_lang is the result of self.get_user_language()
@@ -1201,9 +1168,7 @@ class Coder:
             language = "the same language they are using"  # Default if no specific lang detected
 
         if self.fence[0] == "`" * 4:
-            quad_backtick_reminder = (
-                "\nIMPORTANT: Use *quadruple* backticks ```` as fences, not triple backticks!\n"
-            )
+            quad_backtick_reminder = "\nIMPORTANT: Use *quadruple* backticks ```` as fences, not triple backticks!\n"
         else:
             quad_backtick_reminder = ""
 
@@ -1284,9 +1249,7 @@ class Coder:
 
         if self.gpt_prompts.system_reminder:
             reminder_message = [
-                dict(
-                    role="system", content=self.fmt_system_prompt(self.gpt_prompts.system_reminder)
-                ),
+                dict(role="system", content=self.fmt_system_prompt(self.gpt_prompts.system_reminder)),
             ]
         else:
             reminder_message = []
@@ -1312,20 +1275,12 @@ class Coder:
 
         max_input_tokens = self.main_model.info.get("max_input_tokens") or 0
         # Add the reminder prompt if we still have room to include it.
-        if (
-            not max_input_tokens
-            or total_tokens < max_input_tokens
-            and self.gpt_prompts.system_reminder
-        ):
+        if not max_input_tokens or total_tokens < max_input_tokens and self.gpt_prompts.system_reminder:
             if self.main_model.reminder == "sys":
                 chunks.reminder = reminder_message
             elif self.main_model.reminder == "user" and final and final["role"] == "user":
                 # stuff it into the user message
-                new_content = (
-                    final["content"]
-                    + "\n\n"
-                    + self.fmt_system_prompt(self.gpt_prompts.system_reminder)
-                )
+                new_content = final["content"] + "\n\n" + self.fmt_system_prompt(self.gpt_prompts.system_reminder)
                 chunks.cur[-1] = dict(role=final["role"], content=new_content)
 
         return chunks
@@ -1380,9 +1335,9 @@ class Coder:
                     self.io.tool_warning(f"Cache warming error: {str(err)}")
                     continue
 
-                cache_hit_tokens = getattr(
-                    completion.usage, "prompt_cache_hit_tokens", 0
-                ) or getattr(completion.usage, "cache_read_input_tokens", 0)
+                cache_hit_tokens = getattr(completion.usage, "prompt_cache_hit_tokens", 0) or getattr(
+                    completion.usage, "cache_read_input_tokens", 0
+                )
 
                 if self.verbose:
                     self.io.tool_output(f"Warmed {format_tokens(cache_hit_tokens)} cached tokens.")
@@ -1500,9 +1455,7 @@ class Coder:
                     if messages[-1]["role"] == "assistant":
                         messages[-1]["content"] = self.multi_response_content
                     else:
-                        messages.append(
-                            dict(role="assistant", content=self.multi_response_content, prefix=True)
-                        )
+                        messages.append(dict(role="assistant", content=self.multi_response_content, prefix=True))
                 except Exception as err:
                     self.mdstream = None
                     lines = traceback.format_exception(type(err), err, err.__traceback__)
@@ -1577,9 +1530,7 @@ class Coder:
                 self.cur_messages[-1]["content"] += "\n^C KeyboardInterrupt"
             else:
                 self.cur_messages += [dict(role="user", content="^C KeyboardInterrupt")]
-            self.cur_messages += [
-                dict(role="assistant", content="I see that you interrupted my previous reply.")
-            ]
+            self.cur_messages += [dict(role="assistant", content="I see that you interrupted my previous reply.")]
             return
 
         edited = self.apply_updates()
@@ -1769,9 +1720,7 @@ class Coder:
         added_fnames = []
         group = ConfirmGroup(new_mentions)
         for rel_fname in sorted(new_mentions):
-            if self.io.confirm_ask(
-                "Add file to the chat?", subject=rel_fname, group=group, allow_never=True
-            ):
+            if self.io.confirm_ask("Add file to the chat?", subject=rel_fname, group=group, allow_never=True):
                 self.add_rel_fname(rel_fname)
                 added_fnames.append(rel_fname)
             else:
@@ -1848,9 +1797,7 @@ class Coder:
         show_content_err = None
         try:
             if completion.choices[0].message.tool_calls:
-                self.partial_response_function_call = (
-                    completion.choices[0].message.tool_calls[0].function
-                )
+                self.partial_response_function_call = completion.choices[0].message.tool_calls[0].function
         except AttributeError as func_err:
             show_func_err = func_err
 
@@ -1882,19 +1829,14 @@ class Coder:
         show_resp = self.render_incremental_response(True)
 
         if reasoning_content:
-            formatted_reasoning = format_reasoning_content(
-                reasoning_content, self.reasoning_tag_name
-            )
+            formatted_reasoning = format_reasoning_content(reasoning_content, self.reasoning_tag_name)
             show_resp = formatted_reasoning + show_resp
 
         show_resp = replace_reasoning_tags(show_resp, self.reasoning_tag_name)
 
         self.io.assistant_output(show_resp, pretty=self.show_pretty())
 
-        if (
-            hasattr(completion.choices[0], "finish_reason")
-            and completion.choices[0].finish_reason == "length"
-        ):
+        if hasattr(completion.choices[0], "finish_reason") and completion.choices[0].finish_reason == "length":
             raise FinishReasonLength()
 
     def show_send_output_stream(self, completion):
@@ -1904,10 +1846,7 @@ class Coder:
             if len(chunk.choices) == 0:
                 continue
 
-            if (
-                hasattr(chunk.choices[0], "finish_reason")
-                and chunk.choices[0].finish_reason == "length"
-            ):
+            if hasattr(chunk.choices[0], "finish_reason") and chunk.choices[0].finish_reason == "length":
                 raise FinishReasonLength()
 
             try:
@@ -1964,9 +1903,7 @@ class Coder:
                     sys.stdout.write(text)
                 except UnicodeEncodeError:
                     # Safely encode and decode the text
-                    safe_text = text.encode(sys.stdout.encoding, errors="backslashreplace").decode(
-                        sys.stdout.encoding
-                    )
+                    safe_text = text.encode(sys.stdout.encoding, errors="backslashreplace").decode(sys.stdout.encoding)
                     sys.stdout.write(safe_text)
                 sys.stdout.flush()
                 yield text
@@ -2055,10 +1992,7 @@ class Coder:
             else:
                 return f"{value:.{max(2, 2 - int(math.log10(magnitude)))}f}"
 
-        cost_report = (
-            f"Cost: ${format_cost(self.message_cost)} message,"
-            f" ${format_cost(self.total_cost)} session."
-        )
+        cost_report = f"Cost: ${format_cost(self.message_cost)} message, ${format_cost(self.total_cost)} session."
 
         if cache_hit_tokens and cache_write_tokens:
             sep = "\n"
@@ -2067,16 +2001,12 @@ class Coder:
 
         self.usage_report = tokens_report + sep + cost_report
 
-    def compute_costs_from_tokens(
-        self, prompt_tokens, completion_tokens, cache_write_tokens, cache_hit_tokens
-    ):
+    def compute_costs_from_tokens(self, prompt_tokens, completion_tokens, cache_write_tokens, cache_hit_tokens):
         cost = 0
 
         input_cost_per_token = self.main_model.info.get("input_cost_per_token") or 0
         output_cost_per_token = self.main_model.info.get("output_cost_per_token") or 0
-        input_cost_per_token_cache_hit = (
-            self.main_model.info.get("input_cost_per_token_cache_hit") or 0
-        )
+        input_cost_per_token_cache_hit = self.main_model.info.get("input_cost_per_token_cache_hit") or 0
 
         # deepseek
         # prompt_cache_hit_tokens + prompt_cache_miss_tokens
@@ -2449,9 +2379,7 @@ class Coder:
 
     def handle_shell_commands(self, commands_str, group):
         commands = commands_str.strip().splitlines()
-        command_count = sum(
-            1 for cmd in commands if cmd.strip() and not cmd.strip().startswith("#")
-        )
+        command_count = sum(1 for cmd in commands if cmd.strip() and not cmd.strip().startswith("#"))
         prompt = "Run shell command?" if command_count == 1 else "Run shell commands?"
         if not self.io.confirm_ask(
             prompt,
@@ -2476,9 +2404,7 @@ class Coder:
             if output:
                 accumulated_output += f"Output from {command}\n{output}\n"
 
-        if accumulated_output.strip() and self.io.confirm_ask(
-            "Add command output to the chat?", allow_never=True
-        ):
+        if accumulated_output.strip() and self.io.confirm_ask("Add command output to the chat?", allow_never=True):
             num_lines = len(accumulated_output.strip().splitlines())
             line_plural = "line" if num_lines == 1 else "lines"
             self.io.tool_output(f"Added {num_lines} {line_plural} of output to the chat.")

@@ -8,7 +8,7 @@ import pypandoc
 from aider import __version__, urls, utils
 from aider.dump import dump  # noqa: F401
 
-aider_user_agent = f"Aider/{__version__} +{urls.website}"
+aider_user_agent = f"FlyCoder/{__version__} +{urls.website}"
 
 # Playwright is nice because it has a simple way to install dependencies on most
 # platforms.
