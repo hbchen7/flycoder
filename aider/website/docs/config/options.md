@@ -734,7 +734,7 @@ Default: platform
 Environment variable: `AIDER_LINE_ENDINGS`  
 
 ### `--config CONFIG_FILE`
-Specify the config file (default: search for .aider.conf.yml in git root, cwd or home directory)  
+Specify the config file (default: search for .flycoder.conf.yml in git root, cwd or home directory)  
 Aliases:
   - `-c CONFIG_FILE`
   - `--config CONFIG_FILE`

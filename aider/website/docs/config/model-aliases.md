@@ -21,7 +21,7 @@ Multiple aliases can be defined by using the `--alias` option multiple times. Ea
 ## Configuration File
 
 Of course,
-you can also define aliases in your [`.aider.conf.yml` file](https://aider.chat/docs/config/aider_conf.html):
+you can also define aliases in your [`.flycoder.conf.yml` file](https://aider.chat/docs/config/aider_conf.html):
 
 ```yaml
 alias:

@@ -36,7 +36,7 @@ to find or contribute conventions files.
 ## Always load conventions
 
 You can also configure aider to always load your conventions file
-in the [`.aider.conf.yml` config file](https://aider.chat/docs/config/aider_conf.html):
+in the [`.flycoder.conf.yml` config file](https://aider.chat/docs/config/aider_conf.html):
 
 
 ```yaml

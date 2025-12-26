@@ -39,7 +39,7 @@ aider --model openrouter/deepseek/deepseek-chat
 # Or use the --api-key command line option
 aider --model openrouter/deepseek/deepseek-chat --api-key openrouter=<your-key>
 
-# Or add it to .aider.conf.yml in your home directory or project root:
+# Or add it to .flycoder.conf.yml in your home directory or project root:
 api-key:
   - openrouter=<your-key>
 ```
@@ -77,7 +77,7 @@ aider --model fireworks_ai/accounts/fireworks/models/deepseek-chat
 # Or use the --api-key command line option
 aider --model fireworks_ai/accounts/fireworks/models/deepseek-chat --api-key fireworks=<your-key>
 
-# Or add it to .aider.conf.yml in your home directory or project root:
+# Or add it to .flycoder.conf.yml in your home directory or project root:
 api-key:
   - fireworks=<your-key>
 ```
@@ -116,7 +116,7 @@ aider --model openai/deepseek-ai/DeepSeek-V3
 # Or use the --api-key command line option
 aider --model openai/deepseek-ai/DeepSeek-V3 --api-key openai=<your-key>
 
-# Or add it to .aider.conf.yml in your home directory or project root:
+# Or add it to .flycoder.conf.yml in your home directory or project root:
 api-key:
   - openai=<your-key>
 ```

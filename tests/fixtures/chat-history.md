@@ -14452,7 +14452,7 @@ This updated *SEARCH/REPLACE block* should now exactly match the existing code i
 > aider/website/assets/models-over-time.svg  
 > aider/website/assets/robot-ast.png  
 > aider/website/assets/robot-flowchart.png  
-> aider/website/assets/sample.aider.conf.yml  
+> aider/website/assets/sample.flycoder.conf.yml  
 > aider/website/assets/sample.env  
 > aider/website/assets/screencast.svg  
 > aider/website/assets/screenshot.png  
@@ -20653,7 +20653,7 @@ These changes allow users to specify a custom filename with a valid extension wh
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -20770,7 +20770,7 @@ Option settings:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -33173,10 +33173,10 @@ index 45857c1d..8122df74 100644
              commit_message = "aider: " + commit_message
  
          if not commit_message:
-diff --git a/aider/website/assets/sample.aider.conf.yml b/aider/website/assets/sample.aider.conf.yml
+diff --git a/aider/website/assets/sample.flycoder.conf.yml b/aider/website/assets/sample.flycoder.conf.yml
 index 8a22224f..b771f791 100644
---- a/aider/website/assets/sample.aider.conf.yml
-+++ b/aider/website/assets/sample.aider.conf.yml
+--- a/aider/website/assets/sample.flycoder.conf.yml
++++ b/aider/website/assets/sample.flycoder.conf.yml
 @@ -171,7 +171,10 @@
  #attribute-committer: true
  
@@ -33368,10 +33368,10 @@ index cb955dac..32e5e4d3 100644
 > commit_message = "aider: " + commit_message  
 >  
 > if not commit_message:  
-> diff --git a/aider/website/assets/sample.aider.conf.yml b/aider/website/assets/sample.aider.conf.yml  
+> diff --git a/aider/website/assets/sample.flycoder.conf.yml b/aider/website/assets/sample.flycoder.conf.yml  
 > index 8a22224f..b771f791 100644  
-> --- a/aider/website/assets/sample.aider.conf.yml  
-> +++ b/aider/website/assets/sample.aider.conf.yml  
+> --- a/aider/website/assets/sample.flycoder.conf.yml  
+> +++ b/aider/website/assets/sample.flycoder.conf.yml  
 > @@ -171,7 +171,10 @@  
 > #attribute-committer: true  
 >  
@@ -40902,7 +40902,7 @@ Let me know if you'd like to add any of these or if you have any specific questi
 > aider/website/assets/models-over-time.svg  
 > aider/website/assets/robot-ast.png  
 > aider/website/assets/robot-flowchart.png  
-> aider/website/assets/sample.aider.conf.yml  
+> aider/website/assets/sample.flycoder.conf.yml  
 > aider/website/assets/sample.env  
 > aider/website/assets/screencast.svg  
 > aider/website/assets/screenshot.png  
@@ -43098,7 +43098,7 @@ This modification will include both the in-chat files and the read-only files in
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -46413,7 +46413,7 @@ HISTORY.md
   - ask: Ask questions about your code without making any changes.
   - code: Ask for changes to your code (using the best edit format).
   - help: Get help about using aider (usage, config, troubleshoot).
-- Add `file: CONVENTIONS.md` to `.aider.conf.yml` to always load a specific file.
+- Add `file: CONVENTIONS.md` to `.flycoder.conf.yml` to always load a specific file.
   - Or `file: [file1, file2, file3]` to always load multiple files.
 - Enhanced token usage and cost reporting. Now works when streaming too.
 - Filename auto-complete for `/add` and `/drop` is now case-insensitive.
@@ -46872,7 +46872,7 @@ HISTORY.md
   - ask : Poser des questions sur votre code sans effectuer de modifications.
   - code : Demander des modifications à votre code (en utilisant le meilleur format d'édition).
   - help : Obtenir de l'aide sur l'utilisation d'aider (utilisation, configuration, dépannage).
-- Ajout de `file: CONVENTIONS.md` à `.aider.conf.yml` pour toujours charger un fichier spécifique.
+- Ajout de `file: CONVENTIONS.md` à `.flycoder.conf.yml` pour toujours charger un fichier spécifique.
   - Ou `file: [file1, file2, file3]` pour toujours charger plusieurs fichiers.
 - Amélioration de l'utilisation des tokens et du rapport des coûts. Fonctionne maintenant aussi en mode flux.
 - L'auto-complétion des noms de fichiers pour `/add` et `/drop` est désormais insensible à la casse.
@@ -47142,7 +47142,7 @@ This change adds a conditional statement to check if the model supports assistan
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -48331,7 +48331,7 @@ These changes should be sufficient to implement the requested feature. Is there 
 > aider/website/assets/models-over-time.svg  
 > aider/website/assets/robot-ast.png  
 > aider/website/assets/robot-flowchart.png  
-> aider/website/assets/sample.aider.conf.yml  
+> aider/website/assets/sample.flycoder.conf.yml  
 > aider/website/assets/sample.env  
 > aider/website/assets/screencast.svg  
 > aider/website/assets/screenshot.png  
@@ -50092,7 +50092,7 @@ These changes will add the `--analytics-log` argument to the command-line option
 > aider/website/assets/models-over-time.svg  
 > aider/website/assets/robot-ast.png  
 > aider/website/assets/robot-flowchart.png  
-> aider/website/assets/sample.aider.conf.yml  
+> aider/website/assets/sample.flycoder.conf.yml  
 > aider/website/assets/sample.env  
 > aider/website/assets/screencast.svg  
 > aider/website/assets/screenshot.png  
@@ -50290,7 +50290,7 @@ These changes will add the `--analytics-log` argument to the command-line option
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   analytics:         true
 
@@ -51442,7 +51442,7 @@ HISTORY.md
   - demande : Poser des questions sur votre code sans faire de changements.
   - code : Demander des changements dans votre code (en utilisant le meilleur format d'édition).
   - aide : Obtenir de l'aide sur l'utilisation d'aider (utilisation, configuration, dépannage).
-- Ajout de `file: CONVENTIONS.md` à `.aider.conf.yml` pour toujours charger un fichier spécifique.
+- Ajout de `file: CONVENTIONS.md` à `.flycoder.conf.yml` pour toujours charger un fichier spécifique.
   - Ou `file: [file1, file2, file3]` pour toujours charger plusieurs fichiers.
 - Amélioration de l'utilisation des jetons et du rapport des coûts. Fonctionne maintenant aussi avec le streaming.
 - L'auto-complétion des noms de fichiers pour `/add` et `/drop` est désormais insensible à la casse.
@@ -51660,7 +51660,7 @@ HISTORY.md
   - ask : Poser des questions sur votre code sans apporter de modifications.
   - code : Demander des modifications à votre code (en utilisant le meilleur format d'édition).
   - help : Obtenir de l'aide sur l'utilisation d'aider (utilisation, configuration, dépannage).
-- Ajout de `file: CONVENTIONS.md` à `.aider.conf.yml` pour toujours charger un fichier spécifique.
+- Ajout de `file: CONVENTIONS.md` à `.flycoder.conf.yml` pour toujours charger un fichier spécifique.
   - Ou `file: [file1, file2, file3]` pour toujours charger plusieurs fichiers.
 - Amélioration du rapport d'utilisation et de coût des tokens. Fonctionne maintenant lors du streaming aussi.
 - La complétion de nom de fichier pour `/add` et `/drop` est maintenant insensible à la casse.
@@ -53131,7 +53131,7 @@ These changes add the `verbose` argument to the `check_version` function and pas
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -53239,7 +53239,7 @@ Option settings:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -53347,7 +53347,7 @@ Option settings:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -53506,7 +53506,7 @@ Option settings:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -55535,7 +55535,7 @@ HISTORY.md
   - ask : Poser des questions sur votre code sans effectuer de modifications.
   - code : Demander des modifications à votre code (en utilisant le meilleur format d'édition).
   - help : Obtenir de l'aide sur l'utilisation d'aider (utilisation, configuration, dépannage).
-- Ajout de `file: CONVENTIONS.md` à `.aider.conf.yml` pour toujours charger un fichier spécifique.
+- Ajout de `file: CONVENTIONS.md` à `.flycoder.conf.yml` pour toujours charger un fichier spécifique.
   - Ou `file: [file1, file2, file3]` pour toujours charger plusieurs fichiers.
 - Amélioration de l'utilisation et du rapport des jetons. Fonctionne maintenant aussi en mode flux.
 - L'auto-complétion du nom de fichier pour `/add` et `/drop` est désormais insensible à la casse.
@@ -56163,7 +56163,7 @@ HISTORY.md
   - ask : Poser des questions sur votre code sans effectuer de modifications.
   - code : Demander des modifications à votre code (en utilisant le meilleur format d'édition).
   - help : Obtenir de l'aide sur l'utilisation d'aider (utilisation, configuration, dépannage).
-- Ajout de `file: CONVENTIONS.md` à `.aider.conf.yml` pour toujours charger un fichier spécifique.
+- Ajout de `file: CONVENTIONS.md` à `.flycoder.conf.yml` pour toujours charger un fichier spécifique.
   - Ou `file: [file1, file2, file3]` pour toujours charger plusieurs fichiers.
 - Amélioration de l'utilisation et du rapport des jetons. Fonctionne maintenant aussi en mode flux.
 - L'auto-complétion du nom de fichier pour `/add` et `/drop` est désormais insensible à la casse.
@@ -57259,7 +57259,7 @@ HISTORY.md
   - ask : Poser des questions sur votre code sans effectuer de modifications.
   - code : Demander des modifications à votre code (en utilisant le meilleur format d'édition).
   - help : Obtenir de l'aide sur l'utilisation d'aider (utilisation, configuration, dépannage).
-- Ajout de `file: CONVENTIONS.md` à `.aider.conf.yml` pour toujours charger un fichier spécifique.
+- Ajout de `file: CONVENTIONS.md` à `.flycoder.conf.yml` pour toujours charger un fichier spécifique.
   - Ou `file: [file1, file2, file3]` pour toujours charger plusieurs fichiers.
 - Amélioration de l'utilisation et du rapport des jetons. Fonctionne maintenant aussi en mode flux.
 - L'auto-complétion du nom de fichier pour `/add` et `/drop` est désormais insensible à la casse.
@@ -57462,7 +57462,7 @@ HISTORY.md
   - ask : Poser des questions sur votre code sans effectuer de modifications.
   - code : Demander des modifications à votre code (en utilisant le meilleur format d'édition).
   - help : Obtenir de l'aide sur l'utilisation d'aider (utilisation, configuration, dépannage).
-- Ajout de `file: CONVENTIONS.md` à `.aider.conf.yml` pour toujours charger un fichier spécifique.
+- Ajout de `file: CONVENTIONS.md` à `.flycoder.conf.yml` pour toujours charger un fichier spécifique.
   - Ou `file: [file1, file2, file3]` pour toujours charger plusieurs fichiers.
 - Amélioration de l'utilisation et du rapport des jetons. Fonctionne maintenant aussi en mode flux.
 - L'auto-complétion du nom de fichier pour `/add` et `/drop` est désormais insensible à la casse.
@@ -58396,7 +58396,7 @@ HISTORY.md
   - demande : Poser des questions sur votre code sans effectuer de modifications.
   - code : Demander des modifications de votre code (en utilisant le meilleur format d'édition).
   - aide : Obtenir de l'aide sur l'utilisation d'aider (utilisation, configuration, dépannage).
-- Ajout de `file: CONVENTIONS.md` à `.aider.conf.yml` pour toujours charger un fichier spécifique.
+- Ajout de `file: CONVENTIONS.md` à `.flycoder.conf.yml` pour toujours charger un fichier spécifique.
   - Ou `file: [file1, file2, file3]` pour toujours charger plusieurs fichiers.
 - Amélioration du rapport d'utilisation et de coût des jetons. Fonctionne maintenant aussi en mode flux.
 - L'auto-complétion du nom de fichier pour `/add` et `/drop` est désormais insensible à la casse.
@@ -66568,49 +66568,49 @@ This change replaces "blue" with "lightblue" in the color assignment for models 
 > Added tests/basic/test_main.py to the chat.  
 > Use /help <question> for help, run "aider --help" to see cmd line args  
 
-#### /ask are there tests to check which .aider.conf.yml files are being loaded?  
+#### /ask are there tests to check which .flycoder.conf.yml files are being loaded?  
 
-####  are there tests to check which .aider.conf.yml files are being loaded?  
+####  are there tests to check which .flycoder.conf.yml files are being loaded?  
 
-After reviewing the test file you provided (tests/basic/test_main.py), I can see that there are some tests related to .aider.conf.yml files, but they are limited in scope. Here's what I found:
+After reviewing the test file you provided (tests/basic/test_main.py), I can see that there are some tests related to .flycoder.conf.yml files, but they are limited in scope. Here's what I found:
 
-1. There is a test method called `test_main_with_git_config_yml` which checks the behavior when a .aider.conf.yml file is present in the root directory of the git repository. This test specifically checks the `auto-commits` configuration:
+1. There is a test method called `test_main_with_git_config_yml` which checks the behavior when a .flycoder.conf.yml file is present in the root directory of the git repository. This test specifically checks the `auto-commits` configuration:
 
 ```python
 def test_main_with_git_config_yml(self):
     make_repo()
 
-    Path(".aider.conf.yml").write_text("auto-commits: false\n")
+    Path(".flycoder.conf.yml").write_text("auto-commits: false\n")
     with patch("aider.coders.Coder.create") as MockCoder:
         main(["--yes"], input=DummyInput(), output=DummyOutput())
         _, kwargs = MockCoder.call_args
         assert kwargs["auto_commits"] is False
 
-    Path(".aider.conf.yml").write_text("auto-commits: true\n")
+    Path(".flycoder.conf.yml").write_text("auto-commits: true\n")
     with patch("aider.coders.Coder.create") as MockCoder:
         main([], input=DummyInput(), output=DummyOutput())
         _, kwargs = MockCoder.call_args
         assert kwargs["auto_commits"] is True
 ```
 
-This test checks that the `auto-commits` setting in the .aider.conf.yml file is correctly applied when running the main function.
+This test checks that the `auto-commits` setting in the .flycoder.conf.yml file is correctly applied when running the main function.
 
 However, there are some limitations to the current tests:
 
-1. They only check for a .aider.conf.yml file in the root directory of the git repository.
+1. They only check for a .flycoder.conf.yml file in the root directory of the git repository.
 2. They only test the `auto-commits` configuration option.
-3. There are no tests for loading .aider.conf.yml files from other locations (e.g., user's home directory).
-4. There are no tests for merging configurations from multiple .aider.conf.yml files.
+3. There are no tests for loading .flycoder.conf.yml files from other locations (e.g., user's home directory).
+4. There are no tests for merging configurations from multiple .flycoder.conf.yml files.
 
-To improve the test coverage for .aider.conf.yml file loading, you might want to add tests that:
+To improve the test coverage for .flycoder.conf.yml file loading, you might want to add tests that:
 
-1. Check for loading .aider.conf.yml from the user's home directory.
+1. Check for loading .flycoder.conf.yml from the user's home directory.
 2. Test loading and merging configurations from multiple locations (e.g., home directory, git root, current working directory).
 3. Test more configuration options beyond just `auto-commits`.
-4. Verify the precedence order when conflicting settings are present in multiple .aider.conf.yml files.
-5. Test the behavior when no .aider.conf.yml files are present.
+4. Verify the precedence order when conflicting settings are present in multiple .flycoder.conf.yml files.
+5. Test the behavior when no .flycoder.conf.yml files are present.
 
-These additional tests would provide more comprehensive coverage of the .aider.conf.yml file loading functionality.
+These additional tests would provide more comprehensive coverage of the .flycoder.conf.yml file loading functionality.
 
 > Tokens: 5,052 sent, 502 received. Cost: $0.02 message, $0.02 session.  
 
@@ -66756,11 +66756,11 @@ tests/basic/test_main.py
             cwd.mkdir()
             os.chdir(cwd)
             
-            # Create .aider.conf.yml files in different locations
-            home_config = fake_home / ".aider.conf.yml"
-            git_config = git_dir / ".aider.conf.yml"
-            cwd_config = cwd / ".aider.conf.yml"
-            named_config = git_dir / "named.aider.conf.yml"
+            # Create .flycoder.conf.yml files in different locations
+            home_config = fake_home / ".flycoder.conf.yml"
+            git_config = git_dir / ".flycoder.conf.yml"
+            cwd_config = cwd / ".flycoder.conf.yml"
+            named_config = git_dir / "named.flycoder.conf.yml"
             
             home_config.write_text("model: gpt-3.5-turbo\nmap-tokens: 1024\n")
             git_config.write_text("model: gpt-4\nmap-tokens: 2048\n")
@@ -66803,7 +66803,7 @@ tests/basic/test_main.py
 This new test method, `test_yaml_config_file_loading`, does the following:
 
 1. Creates a temporary directory structure with a fake home directory, a git root, and a subdirectory as the current working directory.
-2. Creates `.aider.conf.yml` files in the home directory, git root, current working directory, and a named config file.
+2. Creates `.flycoder.conf.yml` files in the home directory, git root, current working directory, and a named config file.
 3. Tests loading configurations from different locations in the order specified in the documentation:
    - Current working directory
    - Git root
@@ -66865,11 +66865,11 @@ self = <test_main.TestMain testMethod=test_yaml_config_file_loading>
             cwd.mkdir()
             os.chdir(cwd)
     
-            # Create .aider.conf.yml files in different locations
-            home_config = fake_home / ".aider.conf.yml"
-            git_config = git_dir / ".aider.conf.yml"
-            cwd_config = cwd / ".aider.conf.yml"
-            named_config = git_dir / "named.aider.conf.yml"
+            # Create .flycoder.conf.yml files in different locations
+            home_config = fake_home / ".flycoder.conf.yml"
+            git_config = git_dir / ".flycoder.conf.yml"
+            cwd_config = cwd / ".flycoder.conf.yml"
+            named_config = git_dir / "named.flycoder.conf.yml"
     
             home_config.write_text("model: gpt-3.5-turbo\nmap-tokens: 1024\n")
             git_config.write_text("model: gpt-4\nmap-tokens: 2048\n")
@@ -66925,11 +66925,11 @@ FAILED tests/basic/test_main.py::TestMain::test_yaml_config_file_loading - Ke...
 > cwd.mkdir()  
 > os.chdir(cwd)  
 >  
-> # Create .aider.conf.yml files in different locations  
-> home_config = fake_home / ".aider.conf.yml"  
-> git_config = git_dir / ".aider.conf.yml"  
-> cwd_config = cwd / ".aider.conf.yml"  
-> named_config = git_dir / "named.aider.conf.yml"  
+> # Create .flycoder.conf.yml files in different locations  
+> home_config = fake_home / ".flycoder.conf.yml"  
+> git_config = git_dir / ".flycoder.conf.yml"  
+> cwd_config = cwd / ".flycoder.conf.yml"  
+> named_config = git_dir / "named.flycoder.conf.yml"  
 >  
 > home_config.write_text("model: gpt-3.5-turbo\nmap-tokens: 1024\n")  
 > git_config.write_text("model: gpt-4\nmap-tokens: 2048\n")  
@@ -67018,11 +67018,11 @@ self = <test_main.TestMain testMethod=test_yaml_config_file_loading>
             cwd.mkdir()
             os.chdir(cwd)
     
-            # Create .aider.conf.yml files in different locations
-            home_config = fake_home / ".aider.conf.yml"
-            git_config = git_dir / ".aider.conf.yml"
-            cwd_config = cwd / ".aider.conf.yml"
-            named_config = git_dir / "named.aider.conf.yml"
+            # Create .flycoder.conf.yml files in different locations
+            home_config = fake_home / ".flycoder.conf.yml"
+            git_config = git_dir / ".flycoder.conf.yml"
+            cwd_config = cwd / ".flycoder.conf.yml"
+            named_config = git_dir / "named.flycoder.conf.yml"
     
             home_config.write_text("model: gpt-3.5-turbo\nmap-tokens: 1024\n")
             git_config.write_text("model: gpt-4\nmap-tokens: 2048\n")
@@ -67155,11 +67155,11 @@ self = <test_main.TestMain testMethod=test_yaml_config_file_loading>
             cwd.mkdir()
             os.chdir(cwd)
     
-            # Create .aider.conf.yml files in different locations
-            home_config = fake_home / ".aider.conf.yml"
-            git_config = git_dir / ".aider.conf.yml"
-            cwd_config = cwd / ".aider.conf.yml"
-            named_config = git_dir / "named.aider.conf.yml"
+            # Create .flycoder.conf.yml files in different locations
+            home_config = fake_home / ".flycoder.conf.yml"
+            git_config = git_dir / ".flycoder.conf.yml"
+            cwd_config = cwd / ".flycoder.conf.yml"
+            named_config = git_dir / "named.flycoder.conf.yml"
     
             home_config.write_text("model: gpt-3.5-turbo\nmap-tokens: 1024\n")
             git_config.write_text("model: gpt-4\nmap-tokens: 2048\n")
@@ -67217,11 +67217,11 @@ FAILED tests/basic/test_main.py::TestMain::test_yaml_config_file_loading - As...
 > cwd.mkdir()  
 > os.chdir(cwd)  
 >  
-> # Create .aider.conf.yml files in different locations  
-> home_config = fake_home / ".aider.conf.yml"  
-> git_config = git_dir / ".aider.conf.yml"  
-> cwd_config = cwd / ".aider.conf.yml"  
-> named_config = git_dir / "named.aider.conf.yml"  
+> # Create .flycoder.conf.yml files in different locations  
+> home_config = fake_home / ".flycoder.conf.yml"  
+> git_config = git_dir / ".flycoder.conf.yml"  
+> cwd_config = cwd / ".flycoder.conf.yml"  
+> named_config = git_dir / "named.flycoder.conf.yml"  
 >  
 > home_config.write_text("model: gpt-3.5-turbo\nmap-tokens: 1024\n")  
 > git_config.write_text("model: gpt-4\nmap-tokens: 2048\n")  
@@ -67480,7 +67480,7 @@ This change will add an "[EXISTS]" marker next to each file in the `default_conf
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -68292,7 +68292,7 @@ les messages d'engagement avec 'aider : ' si aider a rédigé les modifications 
         is_config_file=True,
         metavar="CONFIG_FILE",
         help=(
-            "Spécifier le fichier de configuration (par défaut : rechercher .aider.conf.yml dans la racine du dépôt git,"
+            "Spécifier le fichier de configuration (par défaut : rechercher .flycoder.conf.yml dans la racine du dépôt git,"
             " le répertoire de travail courant ou le répertoire personnel)"
         ),
     )
@@ -72096,7 +72096,7 @@ These changes will add the new test for the `--model-metadata-file` option and e
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -72213,7 +72213,7 @@ Option settings:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -72324,7 +72324,7 @@ Option settings:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -72445,7 +72445,7 @@ Option settings:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -72566,7 +72566,7 @@ Option settings:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -72687,7 +72687,7 @@ Option settings:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -72808,7 +72808,7 @@ Option settings:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -72928,7 +72928,7 @@ Option settings:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -73048,7 +73048,7 @@ Option settings:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -73168,7 +73168,7 @@ Option settings:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -73288,7 +73288,7 @@ Option settings:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -73392,7 +73392,7 @@ Option settings:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -73513,7 +73513,7 @@ Option settings:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -73654,7 +73654,7 @@ Option settings:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -81003,7 +81003,7 @@ Bonjour!
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -81119,7 +81119,7 @@ Option settings:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -81538,7 +81538,7 @@ HISTORY.md
   - ask : Poser des questions sur votre code sans faire de changements.
   - code : Demander des modifications à votre code (en utilisant le meilleur format d'édition).
   - help : Obtenir de l'aide sur l'utilisation d'Aider (utilisation, configuration, dépannage).
-- Ajout de `file: CONVENTIONS.md` à `.aider.conf.yml` pour toujours charger un fichier spécifique.
+- Ajout de `file: CONVENTIONS.md` à `.flycoder.conf.yml` pour toujours charger un fichier spécifique.
   - Ou `file: [file1, file2, file3]` pour toujours charger plusieurs fichiers.
 - Amélioration du rapport d'utilisation des tokens et des coûts. Fonctionne maintenant en streaming aussi.
 - La complétion de nom de fichier pour `/add` et `/drop` est maintenant insensible à la casse.
@@ -82028,7 +82028,7 @@ def format_messages(messages, title=None):
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -82146,7 +82146,7 @@ Bonjour!
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:
@@ -85515,7 +85515,7 @@ This command will download and install the pandas library along with its depende
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -85672,7 +85672,7 @@ If you need further assistance or have any specific requirements, feel free to a
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -85823,7 +85823,7 @@ If you need further assistance or have any specific requirements regarding the i
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -85974,7 +85974,7 @@ If you need further assistance or have any specific requirements, feel free to a
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -86766,7 +86766,7 @@ Based on the file structure and names, this appears to be a repository for a too
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -86907,7 +86907,7 @@ Cost: $0.0052 message, $0.0052 session. Use --no-stream for accurate caching cos
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -87048,7 +87048,7 @@ Cost: $0.0052 message, $0.0052 session. Use --no-stream for accurate caching cos
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -87188,7 +87188,7 @@ To install pandas, you can use pip, which is the package installer for Python. S
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -87338,7 +87338,7 @@ Cost: $0.05 message, $0.05 session.
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -87508,7 +87508,7 @@ Remember to ensure that you have all the necessary dependencies installed (like 
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -87678,7 +87678,7 @@ Would you like me to add a command to run the tests directly from the `test_code
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -87848,7 +87848,7 @@ Here's a shell command you can use to install pandas:
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -87995,7 +87995,7 @@ To install pandas, you can use pip, which is the package installer for Python. H
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -88142,7 +88142,7 @@ To install pandas, you can use pip, which is the package installer for Python. H
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -88289,7 +88289,7 @@ To install pandas, you can use pip, which is the package installer for Python. H
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -88436,7 +88436,7 @@ To install pandas, you can use pip, which is the package installer for Python. H
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -88583,7 +88583,7 @@ To install pandas, you can use pip, which is the package installer for Python. H
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -88730,7 +88730,7 @@ To install pandas, you can use pip, which is the package installer for Python. H
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -88877,7 +88877,7 @@ To install pandas, you can use pip, which is the package installer for Python. H
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -89024,7 +89024,7 @@ To install pandas, you can use pip, which is the package installer for Python. H
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 
@@ -91460,7 +91460,7 @@ FAILED tests/basic/test_editblock.py::TestUtils::test_find_original_update_block
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
   cache-prompts:     true
 

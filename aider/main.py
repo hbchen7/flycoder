@@ -461,7 +461,7 @@ def main(argv=None, input=None, output=None, force_git_root=None, return_coder=F
     else:
         git_root = get_git_root()
 
-    conf_fname = Path(".aider.conf.yml")
+    conf_fname = Path(".flycoder.conf.yml")
 
     default_config_files = []
     try:

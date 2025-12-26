@@ -11973,7 +11973,7 @@ HISTORY.md
   - ask: Ask questions about your code without making any changes.
   - code: Ask for changes to your code (using the best edit format).
   - help: Get help about using aider (usage, config, troubleshoot).
-- Add `file: CONVENTIONS.md` to `.aider.conf.yml` to always load a specific file.
+- Add `file: CONVENTIONS.md` to `.flycoder.conf.yml` to always load a specific file.
   - Or `file: [file1, file2, file3]` to always load multiple files.
 - Enhanced token usage and cost reporting. Now works when streaming too.
 - Filename auto-complete for `/add` and `/drop` is now case-insensitive.
@@ -19300,11 +19300,11 @@ def plot_over_time(yaml_file):
             cwd.mkdir()
             os.chdir(cwd)
             
-            # Create .aider.conf.yml files in different locations
-            home_config = fake_home / ".aider.conf.yml"
-            git_config = git_dir / ".aider.conf.yml"
-            cwd_config = cwd / ".aider.conf.yml"
-            named_config = git_dir / "named.aider.conf.yml"
+            # Create .flycoder.conf.yml files in different locations
+            home_config = fake_home / ".flycoder.conf.yml"
+            git_config = git_dir / ".flycoder.conf.yml"
+            cwd_config = cwd / ".flycoder.conf.yml"
+            named_config = git_dir / "named.flycoder.conf.yml"
             
             home_config.write_text("model: gpt-3.5-turbo\nmap-tokens: 1024\n")
             git_config.write_text("model: gpt-4\nmap-tokens: 2048\n")
@@ -24057,7 +24057,7 @@ def format_messages(messages, title=None):
 Environment Variables:
   OPENAI_API_KEY:    ...9doi
   ANTHROPIC_API_KEY: ...CQAA
-Config File (/Users/gauthier/Projects/aider/.aider.conf.yml):
+Config File (/Users/gauthier/Projects/aider/.flycoder.conf.yml):
   lint-cmd:          /Users/gauthier/Projects/aider/tmp.lint.sh
 
 Defaults:

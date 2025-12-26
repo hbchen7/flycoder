@@ -6,7 +6,7 @@ description: How to configure aider with a YAML config file.
 
 # YAML config file
 
-Most of aider's options can be set in an `.aider.conf.yml` file.
+Most of aider's options can be set in an `.flycoder.conf.yml` file.
 Aider will look for a this file in these locations:
 
 - Your home directory.
@@ -40,20 +40,20 @@ read: [CONVENTIONS.md, anotherfile.txt, thirdfile.py]
 
 Below is a sample of the YAML config file, which you
 can also
-[download from GitHub](https://github.com/Aider-AI/aider/blob/main/aider/website/assets/sample.aider.conf.yml).
+[download from GitHub](https://github.com/Aider-AI/aider/blob/main/aider/website/assets/sample.flycoder.conf.yml).
 
 <!--[[[cog
 from aider.args import get_sample_yaml
 from pathlib import Path
 text=get_sample_yaml()
-Path("aider/website/assets/sample.aider.conf.yml").write_text(text)
+Path("aider/website/assets/sample.flycoder.conf.yml").write_text(text)
 cog.outl("```")
 cog.out(text)
 cog.outl("```")
 ]]]-->
 ```
 ##########################################################
-# Sample .aider.conf.yml
+# Sample .flycoder.conf.yml
 # This file lists *all* the valid configuration entries.
 # Place in your home dir, or at the root of your git repo.
 ##########################################################
@@ -467,7 +467,7 @@ cog.outl("```")
 ## Line endings to use when writing files (default: platform)
 #line-endings: platform
 
-## Specify the config file (default: search for .aider.conf.yml in git root, cwd or home directory)
+## Specify the config file (default: search for .flycoder.conf.yml in git root, cwd or home directory)
 #config: xxx
 
 ## Specify the .env file to load (default: .env in git root)

@@ -1008,7 +1008,7 @@ versions.
   - ask: Ask questions about your code without making any changes.
   - code: Ask for changes to your code (using the best edit format).
   - help: Get help about using aider (usage, config, troubleshoot).
-- Add `file: CONVENTIONS.md` to `.aider.conf.yml` to always load a specific file.
+- Add `file: CONVENTIONS.md` to `.flycoder.conf.yml` to always load a specific file.
   - Or `file: [file1, file2, file3]` to always load multiple files.
 - Enhanced token usage and cost reporting. Now works when streaming too.
 - Filename auto-complete for `/add` and `/drop` is now case-insensitive.

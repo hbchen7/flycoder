@@ -8,7 +8,7 @@ description: Information on all of aider's settings and how to use them.
 
 Aider has many options which can be set with
 command line switches.
-Most options can also be set in an `.aider.conf.yml` file
+Most options can also be set in an `.flycoder.conf.yml` file
 which can be placed in your home directory or at the root of
 your git repo. 
 Or by setting environment variables like `AIDER_xxx`
@@ -22,7 +22,7 @@ With a command line switch:
 $ aider --dark-mode
 ```
 
-Using a `.aider.conf.yml` file:
+Using a `.flycoder.conf.yml` file:
 
 ```yaml
 dark-mode: true

@@ -28,7 +28,7 @@ class TestMain(TestCase):
         self.tempdir_obj = IgnorantTemporaryDirectory()
         self.tempdir = self.tempdir_obj.name
         os.chdir(self.tempdir)
-        # Fake home directory prevents tests from using the real ~/.aider.conf.yml file:
+        # Fake home directory prevents tests from using the real ~/.flycoder.conf.yml file:
         self.homedir_obj = IgnorantTemporaryDirectory()
         os.environ["HOME"] = self.homedir_obj.name
         self.input_patcher = patch("builtins.input", return_value=None)
@@ -88,13 +88,13 @@ class TestMain(TestCase):
     def test_main_with_git_config_yml(self):
         make_repo()
 
-        Path(".aider.conf.yml").write_text("auto-commits: false\n")
+        Path(".flycoder.conf.yml").write_text("auto-commits: false\n")
         with patch("aider.coders.Coder.create") as MockCoder:
             main(["--yes"], input=DummyInput(), output=DummyOutput())
             _, kwargs = MockCoder.call_args
             assert kwargs["auto_commits"] is False
 
-        Path(".aider.conf.yml").write_text("auto-commits: true\n")
+        Path(".flycoder.conf.yml").write_text("auto-commits: true\n")
         with patch("aider.coders.Coder.create") as MockCoder:
             main([], input=DummyInput(), output=DummyOutput())
             _, kwargs = MockCoder.call_args
@@ -527,11 +527,11 @@ class TestMain(TestCase):
             cwd.mkdir()
             os.chdir(cwd)
 
-            # Create .aider.conf.yml files in different locations
-            home_config = fake_home / ".aider.conf.yml"
-            git_config = git_dir / ".aider.conf.yml"
-            cwd_config = cwd / ".aider.conf.yml"
-            named_config = git_dir / "named.aider.conf.yml"
+            # Create .flycoder.conf.yml files in different locations
+            home_config = fake_home / ".flycoder.conf.yml"
+            git_config = git_dir / ".flycoder.conf.yml"
+            cwd_config = cwd / ".flycoder.conf.yml"
+            named_config = git_dir / "named.flycoder.conf.yml"
 
             cwd_config.write_text("model: gpt-4-32k\nmap-tokens: 4096\n")
             git_config.write_text("model: gpt-4\nmap-tokens: 2048\n")

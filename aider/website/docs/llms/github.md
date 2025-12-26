@@ -89,7 +89,7 @@ aider --model openai/gpt-4o
 
 ---
 
-## Optional config file (`~/.aider.conf.yml`)
+## Optional config file (`~/.flycoder.conf.yml`)
 
 ```yaml
 openai-api-base: https://api.githubcopilot.com
